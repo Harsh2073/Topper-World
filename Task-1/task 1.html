@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Task 1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .heading{
+            background-color: #C1AA7F;
+            width: 100%;
+            height: 80px;
+            text-align: left;
+            font-size: 25px;
+            padding: 10px 0px 0px 50px;
+        }
+        .navpanel{
+            background-color: #393732;
+            width: 100%;
+            height: 50px;
+        }
+        .navpanel ul{
+            margin:10px 50px 0px 0px;
+            float: right;
+        }
+        .navpanel ul li{
+            display: inline-block;
+        }
+        .navpanel a{
+            color: white;
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        .dropbtn{
+            display: inline-block;
+        }
+        .dropdown{
+            display: inline-block;
+        }
+        .dropdownmenu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdownmenu a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdownmenu {
+            display: block;
+        }
+        .navpanel a:hover{
+            color: #C1AA7F;
+        }
+        .home{
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+        .home img{
+            opacity: 0.5;
+            display: block;
+        }
+        .leftcenter{
+            position: absolute;
+            text-align: left;
+            max-width: 100%;
+            top: 400px;
+            padding-left: 100px;
+            font-size: 25px;
+        }
+        .footer{
+            text-align: center;
+            background-color: #24282B;
+            width: 100%;
+            height: 70px;
+            padding: 0;
+            margin: 0;
+        }
+        .fa{
+            font-size: 25px;
+            width: 30px;
+            height: 30px;
+            text-decoration: none;
+            margin: 10px 10px;
+        }
+        .fa-linkedin{
+            color:white;
+            background-color: #007bb5;
+        }
+        .fa-instagram{
+            color:white;
+            background-color: #f805a7;
+        }
+        .fa-twitter{
+            color:white;
+            background-color: #03b3f8;
+        }
+        .fa-google{
+            color:white;
+            background-color: #fa0404;
+        }
+        .footer p{
+            color: white;
+            text-align: center;
+
+        }
+
+        /* For mobile devices */
+        @media (max-width: 600px) {
+            .heading {
+                height: 60px;
+                font-size: 20px;
+                padding: 5px 0px 0px 20px;
+            }
+            .navpanel {
+                height: 40px;
+            }
+            .navpanel a {
+                font-size: 16px;
+                padding-right: 10px;
+            }
+            .leftcenter {
+                top: 200px;
+                padding-left: 20px;
+                font-size: 18px;
+            }
+        }
+
+        /* For tablets */
+        @media (min-width: 601px) and (max-width: 768px) {
+            .heading {
+                height: 70px;
+                font-size: 22px;
+                padding: 7px 0px 0px 30px;
+            }
+            .navpanel {
+                height: 45px;
+            }
+            .navpanel a {
+                font-size: 18px;
+                padding-right: 15px;
+            }
+            .leftcenter {
+                top: 300px;
+                padding-left: 40px;
+                font-size: 20px;
+            }
+        }
+
+        /* For laptops */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .heading {
+                height: 75px;
+                font-size: 24px;
+                padding: 8px 0px 0px 40px;
+            }
+            .navpanel {
+                height: 48px;
+            }
+            .navpanel a {
+                font-size: 19px;
+                padding-right: 18px;
+            }
+            .leftcenter {
+                top: 350px;
+                padding-left: 80px;
+                font-size: 22px;
+            }
+        }
+
+        /* For desktops */
+        @media (min-width: 1025px) {
+            .heading {
+                height: 80px;
+                font-size: 25px;
+                padding: 10px 0px 0px 50px;
+            }
+            .navpanel {
+                height: 50px;
+            }
+            .navpanel a {
+                font-size: 20px;
+                padding-right: 20px;
+            }
+            .leftcenter {
+                top: 400px;
+                padding-left: 100px;
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>CityTour</h1>
+    </div>
+    <div class="navpanel">    
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">City</a>
+                <div class="dropdownmenu">
+                    <a href="#">Ahmedabad</a>
+                    <a href="#">Mumbai</a>
+                    <a href="#">Delhi</a>
+                    <a href="#">Kolkata</a>
+                </div>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="home">
+        <img src="./landing page 1.jpg" width="100%" height="804px">
+        <div class="leftcenter">
+            <h3>City Vibes and Good Time</h3>
+            <br>
+            <p>Discover the charm, history, <br> and hidden gems of our beautiful city.</p>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <p>Copyright @2024</p>
+    </div>
+</body>
+</html>
